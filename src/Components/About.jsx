@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../assets/hello.jpg";
+import Education from "./Education";
 const About = () => {
   return (
     <section className="mt-16 flex w-full flex-col items-center justify-center gap-10 py-10 text-center text-gray-300">
@@ -20,18 +21,18 @@ const About = () => {
             alt="about"
             className="hidden h-auto w-auto md:block"
           />
-          <div className="flex flex-col items-start justify-center gap-10 text-[4vw] lg:text-[1.5vw]">
-            <div class="flex items-center justify-start gap-4 text-center">
+          <div className="flex flex-col items-start justify-center gap-10 text-[3vw] lg:text-[1.5vw]">
+            <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Name:</span>
               <span className="text-color2">Susil Thapa</span>
             </div>
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Date Of birth:</span>
-              <span className="text-color2">June 29, 1990</span>
+              <span className="text-color2">November 05, 2001</span>
             </div>
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Address:</span>
-              <span className="text-color2">Bhaktapur, Nepal</span>
+              <span className="text-color2">Bardibas, Mahottari</span>
             </div>
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Zip code:</span>
@@ -43,10 +44,11 @@ const About = () => {
             </div>
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Phone:</span>
-              <span className="text-color2">9825232323</span>
+              <span className="text-color2">9825821503</span>
             </div>
           </div>
         </div>
+        <Education />
       </div>
     </section>
   );
