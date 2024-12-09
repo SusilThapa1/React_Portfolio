@@ -3,7 +3,10 @@ import image from "../assets/hello.jpg";
 import Education from "./Education";
 const About = () => {
   return (
-    <section className="mt-16 flex w-full flex-col items-center justify-center gap-10 py-10 text-center text-gray-300">
+    <section
+      id="about"
+      className="flex w-full flex-col items-center justify-center gap-10 pt-16 text-center text-gray-300"
+    >
       <h1 className="bg-custom-gradient bg-clip-text text-5xl font-semibold text-transparent">
         About Me
       </h1>

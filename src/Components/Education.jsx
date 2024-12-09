@@ -20,7 +20,7 @@ const Education = () => {
       level: "+2",
       grade: "A",
       status: "completed",
-      year: "2022",
+      year: "2021",
     },
     {
       name: "Central Point Sec. Academy",
@@ -34,7 +34,7 @@ const Education = () => {
     },
   ];
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-5">
+    <div className="flex w-full flex-col items-center justify-center gap-5 text-gray-300">
       <h1 className="bg-custom-gradient bg-clip-text text-center text-3xl text-transparent">
         My Education
       </h1>
@@ -44,7 +44,9 @@ const Education = () => {
             key={index}
             className="flex h-auto flex-col gap-5 rounded-md bg-[#303031] p-2 text-left shadow-lg transition-all duration-700 md:hover:scale-105"
           >
-            <h2 className="text-xl">{qualification.name}</h2>
+            <h2 className="bg-custom-gradient bg-clip-text text-xl font-semibold text-transparent">
+              {qualification.name}
+            </h2>
             <p className="text-justify">{qualification.description}</p>
             <span>Address: {qualification.address}</span>
             <span>Level: {qualification.level}</span>

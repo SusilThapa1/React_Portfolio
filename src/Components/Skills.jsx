@@ -15,7 +15,10 @@ const Skills = () => {
     { image: nextIcon, name: "Next.js", percentage: "75%" },
   ];
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-5 pt-16">
+    <div
+      id="skills"
+      className="flex w-full flex-col items-center justify-center gap-5 pt-16 text-gray-300"
+    >
       <div className="flex w-full flex-col items-center justify-center gap-10 px-3 text-justify md:w-[80%] md:text-center">
         <h1 className="bg-custom-gradient bg-clip-text text-center text-5xl font-semibold text-transparent">
           My Skills
@@ -46,7 +49,7 @@ const Skills = () => {
             </div>
             <div className="h-3 w-full rounded-full bg-[#474444]">
               <div
-                className={`group-hover:animate-progress relative h-3 rounded-full bg-custom-gradient`}
+                className={`relative h-3 rounded-full bg-custom-gradient group-hover:animate-progress`}
                 style={{ maxWidth: icon.percentage }}
               >
                 <span className="absolute -right-5 -top-5">

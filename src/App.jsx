@@ -2,6 +2,11 @@ import About from "./Components/About";
 import Hero from "./Components/Hero";
 import Header from "./Components/Header";
 import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -10,6 +15,10 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

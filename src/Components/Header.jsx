@@ -4,11 +4,22 @@ import { IoClose } from "react-icons/io5";
 import Button from "./Button";
 
 const Header = () => {
-  const navLinks = ["Home", "About Me", "Services", "Skills", "Contact"];
+  // const navLinks = ["Home", "About Me", "Services", "Skills", "Contact"];
+  const navLinks = [
+    { link: "#home", name: "Home" },
+    { link: "#about", name: "About me" },
+    { link: "#skills", name: "Skills" },
+    { link: "#projects", name: "Projects" },
+    { link: "#contact", name: "Contact" },
+  ];
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeNavLink, setActiveNavLink] = useState("Home");
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+  const handleActiveLink = (navLink) => {
+    setActiveNavLink(navLink);
   };
 
   return (
@@ -18,22 +29,25 @@ const Header = () => {
       </h1>
       <nav>
         <ul
-          className={`absolute right-0 top-16 z-10 flex h-screen flex-col items-center gap-14 bg-[#1a1a1a] p-5 text-lg transition-transform duration-500 ease-in-out md:relative md:top-0 md:h-0 md:translate-x-0 md:flex-row md:gap-3 md:bg-transparent ${
+          className={`absolute right-0 top-16 z-10 flex h-screen flex-col items-center gap-14 bg-[#1a1a1a] p-5 text-lg text-gray-300 transition-transform duration-500 ease-in-out md:relative md:top-0 md:h-0 md:translate-x-0 md:flex-row md:gap-3 md:bg-transparent ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {navLinks.map((navLink, index) => (
             <li
+              onClick={() => handleActiveLink(navLink.name)}
               key={index}
-              className="cursor-pointer bg-custom-gradient bg-clip-text text-transparent hover:text-orange-400"
+              className={`cursor-pointer hover:bg-custom-gradient hover:bg-clip-text hover:text-transparent ${activeNavLink === navLink.name ? "bg-custom-gradient bg-clip-text text-transparent" : ""}`}
             >
-              {navLink}
+              <a href={navLink.link}>{navLink.name}</a>
             </li>
           ))}
         </ul>
       </nav>
       <div className="hidden md:block">
-        <Button type="button" bg="custom-gradient" text="Connect With Me" />
+        <a href="#contact">
+          <Button type="button" bg="custom-gradient" text="Connect With Me" />
+        </a>
       </div>
       <div
         onClick={handleMenu}
