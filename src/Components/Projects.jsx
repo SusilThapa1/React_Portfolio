@@ -46,24 +46,25 @@ const Projects = () => {
       id="projects"
       className="flex flex-col items-center gap-10 pt-16 text-gray-300"
     >
-      <h1 className="bg-custom-gradient bg-clip-text text-center text-5xl font-semibold text-transparent">
+      <h1 className="text-center text-5xl font-semibold text-cyan-400">
         My Projects
       </h1>
       <div className="grid w-full grid-cols-1 gap-10 px-[4vw] md:grid-cols-2 md:px-10 lg:grid-cols-3">
         {projectImages.map((projImg, i) => (
           <div
             key={i}
-            className="group flex h-auto w-auto flex-col gap-5 rounded-lg border-[2px] border-transparent bg-[#262525] p-3 transition-all duration-500 hover:scale-[1.05] hover:border-gray-600"
+            className="flex h-auto w-auto flex-col items-center justify-center gap-5 rounded-lg bg-transparent"
           >
             <img
               src={projImg.image}
               alt="Project"
-              className="object-fit aspect-[9/5] h-auto w-auto rounded-lg transition-all duration-700 md:group-hover:scale-[1.03]"
+              className="object-fit aspect-[9/5] h-auto w-auto rounded-lg"
             />
             <h1 className="text-xl font-semibold">{projImg.name}</h1>
             <p>Technologies used: {projImg.tech}</p>
+
             <a href={projImg.gitLink} target="blank">
-              <Button text="View Code" bg="custom-gradient" />
+              <Button text="View Code" bg="bg-cyan-400" />
             </a>
           </div>
         ))}

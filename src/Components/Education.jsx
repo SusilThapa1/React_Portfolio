@@ -35,18 +35,14 @@ const Education = () => {
   ];
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5 text-gray-300">
-      <h1 className="bg-custom-gradient bg-clip-text text-center text-3xl text-transparent">
-        My Education
-      </h1>
+      <h1 className="text-center text-3xl text-cyan-500">My Education</h1>
       <div className="grid grid-cols-1 gap-5 px-[5vw] md:grid-cols-2 md:flex-row md:px-5 lg:grid-cols-3">
         {qualifications.map((qualification, index) => (
           <div
             key={index}
             className="flex h-auto flex-col gap-5 rounded-md bg-[#303031] p-2 text-left shadow-lg transition-all duration-700 md:hover:scale-105"
           >
-            <h2 className="bg-custom-gradient bg-clip-text text-xl font-semibold text-transparent">
-              {qualification.name}
-            </h2>
+            <h2 className="text-xl font-semibold">{qualification.name}</h2>
             <p className="text-justify">{qualification.description}</p>
             <span>Address: {qualification.address}</span>
             <span>Level: {qualification.level}</span>

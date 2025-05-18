@@ -24,12 +24,12 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 z-50 flex h-16 w-full items-center justify-between bg-[#1a1a1a] px-4 text-white">
-      <h1 className="cursor-pointer bg-custom-gradient bg-clip-text text-3xl font-bold text-transparent">
+      <h1 className="cursor-pointer text-3xl font-bold text-cyan-500">
         S.THAPA
       </h1>
       <nav>
         <ul
-          className={`absolute right-0 top-16 z-10 flex h-screen flex-col items-center gap-14 bg-[#1a1a1a] p-5 text-lg text-gray-300 transition-transform duration-500 ease-in-out md:relative md:top-0 md:h-0 md:translate-x-0 md:flex-row md:gap-3 md:bg-transparent ${
+          className={`absolute right-0 top-16 z-10 flex h-screen w-1/2 flex-col items-center gap-14 bg-[#1a1a1a] p-5 text-lg text-gray-300 transition-transform duration-500 ease-in-out md:relative md:top-0 md:h-0 md:w-full md:translate-x-0 md:flex-row md:gap-3 md:bg-transparent ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -37,7 +37,7 @@ const Header = () => {
             <li
               onClick={() => handleActiveLink(navLink.name)}
               key={index}
-              className={`cursor-pointer hover:bg-custom-gradient hover:bg-clip-text hover:text-transparent ${activeNavLink === navLink.name ? "bg-custom-gradient bg-clip-text text-transparent" : ""}`}
+              className={`cursor-pointer font-semibold transition-colors duration-500 hover:text-cyan-400 ${activeNavLink === navLink.name ? "text-cyan-500" : ""}`}
             >
               <a href={navLink.link}>{navLink.name}</a>
             </li>
@@ -46,7 +46,7 @@ const Header = () => {
       </nav>
       <div className="hidden md:block">
         <a href="#contact">
-          <Button type="button" bg="custom-gradient" text="Connect With Me" />
+          <Button type="button" text="Connect With Me" />
         </a>
       </div>
       <div

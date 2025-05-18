@@ -8,11 +8,11 @@ import nextIcon from "../assets/nextjs.svg";
 const Skills = () => {
   const icons = [
     { image: htmlIcon, name: "HTML5", percentage: "95%" },
-    { image: cssIcon, name: "CSS3", percentage: "90%" },
-    { image: jsIcon, name: "JavaScript", percentage: "85%" },
+    { image: cssIcon, name: "CSS3", percentage: "85%" },
+    { image: jsIcon, name: "JavaScript", percentage: "80%" },
     { image: githubIcon, name: "GitHub", percentage: "50%" },
-    { image: reactIcon, name: "React", percentage: "80%" },
-    { image: nextIcon, name: "Next.js", percentage: "75%" },
+    { image: reactIcon, name: "React", percentage: "75%" },
+    { image: nextIcon, name: "Next.js", percentage: "50%" },
   ];
   return (
     <div
@@ -20,7 +20,7 @@ const Skills = () => {
       className="flex w-full flex-col items-center justify-center gap-5 pt-16 text-gray-300"
     >
       <div className="flex w-full flex-col items-center justify-center gap-10 px-3 text-justify md:w-[80%] md:text-center">
-        <h1 className="bg-custom-gradient bg-clip-text text-center text-5xl font-semibold text-transparent">
+        <h1 className="text-center text-5xl font-semibold text-cyan-400">
           My Skills
         </h1>
         <p>
@@ -47,9 +47,9 @@ const Skills = () => {
               />
               <h1>{icon.name}</h1>
             </div>
-            <div className="h-3 w-full rounded-full bg-[#474444]">
+            <div className="h-3 w-full rounded-full bg-transparent">
               <div
-                className={`relative h-3 rounded-full bg-custom-gradient group-hover:animate-progress`}
+                className={`relative h-3 rounded-full bg-cyan-400 group-hover:animate-progress`}
                 style={{ maxWidth: icon.percentage }}
               >
                 <span className="absolute -right-5 -top-5">

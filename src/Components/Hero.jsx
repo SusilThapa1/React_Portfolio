@@ -9,11 +9,11 @@ const Hero = () => {
     >
       <div className="flex w-[90%] flex-col items-center justify-center gap-8 text-center md:w-[50%]">
         <img
-          className="h-40 w-40 rounded-[50%] bg-white object-cover"
+          className="h-40 w-40 rounded-[50%] border-4 border-dotted border-cyan-600 bg-transparent object-cover transition-colors duration-500"
           src={heroImage}
           alt="profile"
         />
-        <h1 className="bg-custom-gradient bg-clip-text text-[4.5vw] font-semibold text-transparent">
+        <h1 className="text-[4.5vw] font-semibold text-cyan-500">
           I'm Susil Thapa,
         </h1>
         <span className="text-[3.2vw] font-semibold text-gray-300">

@@ -7,9 +7,7 @@ const About = () => {
       id="about"
       className="flex w-full flex-col items-center justify-center gap-10 pt-16 text-center text-gray-300"
     >
-      <h1 className="bg-custom-gradient bg-clip-text text-5xl font-semibold text-transparent">
-        About Me
-      </h1>
+      <h1 className="text-5xl font-semibold text-cyan-500">About Me</h1>
       <div className="flex w-full flex-col items-center justify-center gap-10 px-3 text-justify md:w-[80%] md:text-center">
         <p>
           I am a passionate frontend developer with a knack for crafting
@@ -24,7 +22,7 @@ const About = () => {
             alt="about"
             className="hidden h-auto w-auto md:block"
           />
-          <div className="flex flex-col items-start justify-center gap-10 text-[3vw] lg:text-[1.5vw]">
+          <div className="flex flex-col items-start justify-center gap-10 text-[5vw] md:text-[2vw] lg:text-[1.5vw]">
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Name:</span>
               <span className="text-color2">Susil Thapa</span>
