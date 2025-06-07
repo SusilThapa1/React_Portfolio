@@ -44,12 +44,12 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex flex-col items-center gap-10 pt-16 text-gray-300"
+      className="flex flex-col items-center gap-10 pt-24 text-gray-300"
     >
-      <h1 className="text-center text-5xl font-semibold text-cyan-400">
+      <h1 className="text-center text-3xl font-semibold text-cyan-500">
         My Projects
       </h1>
-      <div className="grid w-full grid-cols-1 gap-10 px-[4vw] md:grid-cols-2 md:px-10 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-10 pb-24 md:grid-cols-2 lg:grid-cols-3">
         {projectImages.map((projImg, i) => (
           <div
             key={i}
@@ -60,8 +60,10 @@ const Projects = () => {
               alt="Project"
               className="object-fit aspect-[9/5] h-auto w-auto rounded-lg"
             />
-            <h1 className="text-xl font-semibold">{projImg.name}</h1>
-            <p>Technologies used: {projImg.tech}</p>
+            <h1 className="text-lg font-semibold md:text-xl">{projImg.name}</h1>
+            <p className="text-sm md:text-lg">
+              Technologies used: {projImg.tech}
+            </p>
 
             <a href={projImg.gitLink} target="blank">
               <Button text="View Code" bg="bg-cyan-400" />
@@ -69,6 +71,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <hr className="w-full border border-gray-500" />
     </div>
   );
 };

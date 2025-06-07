@@ -5,24 +5,24 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex w-full flex-col items-center justify-center gap-10 pt-16 text-center text-gray-300"
+      className="flex w-full flex-col items-center justify-center gap-10 pt-24 text-center text-gray-300"
     >
-      <h1 className="text-5xl font-semibold text-cyan-500">About Me</h1>
-      <div className="flex w-full flex-col items-center justify-center gap-10 px-3 text-justify md:w-[80%] md:text-center">
-        <p>
+      <h1 className="text-3xl font-semibold text-cyan-500">About Me</h1>
+      <div className="flex w-full flex-col items-center justify-center gap-10 text-justify md:text-center">
+        <p className="text-justify leading-relaxed text-gray-400 md:text-lg">
           I am a passionate frontend developer with a knack for crafting
           user-friendly, visually appealing, and responsive web interfaces. I
           specialize in technologies like React, Next.js, and Tailwind CSS, with
           a strong focus on delivering seamless user experiences. I'm always
           eager to learn, adapt, and bring creative ideas to life through code.
         </p>
-        <div className="flex w-full items-center justify-center gap-20 px-10">
+        <div className="flex w-full items-center justify-center gap-20">
           <img
             src={image}
             alt="about"
-            className="hidden h-auto w-auto md:block"
+            className="hidden h-[80vh] w-auto bg-transparent md:block"
           />
-          <div className="flex flex-col items-start justify-center gap-10 text-[5vw] md:text-[2vw] lg:text-[1.5vw]">
+          <div className="flex flex-col items-start justify-center gap-10 text-sm md:text-lg">
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Name:</span>
               <span className="text-color2">Susil Thapa</span>
@@ -51,6 +51,7 @@ const About = () => {
         </div>
         <Education />
       </div>
+      <hr className="w-full border border-gray-500" />
     </section>
   );
 };

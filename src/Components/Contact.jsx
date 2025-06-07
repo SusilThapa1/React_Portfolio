@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Button from "./Button";
 import { LuMail } from "react-icons/lu";
 import { MdOutlinePhone } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { FaFacebookF } from "react-icons/fa6";
-import { GrInstagram } from "react-icons/gr";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [errors, setErrors] = useState({});
+  const formRef = useRef();
+
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const validate = (formData) => {
     const newErrors = {};
@@ -25,32 +30,37 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const form = event.target; // Get the form element
-    const formData = Object.fromEntries(new FormData(form));
+    const formData = Object.fromEntries(new FormData(formRef.current));
 
     const newErrors = validate(formData);
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
+    setErrors({});
 
-    setErrors({}); // Clear errors if validation passes
-    formData.access_key = import.meta.env.VITE_FORM_ACCESS_KEY;
+    // Prepare profile pic URL with fallback & encode email safely
+    const profilePicUrl = formData.email
+      ? `https://i.pravatar.cc/150?u=${encodeURIComponent(formData.email)}`
+      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTML0gExaohZHdZW3609F12nUmVc14WXYNx_w&s";
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    }).then((res) => res.json());
-    console.log(res);
+    try {
+      // Send form with extra params to EmailJS (see docs on passing custom params)
+      const result = await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          ...formData,
+          profile_pic_url: profilePicUrl,
+        },
+        publicKey,
+      );
 
-    if (res.success) {
-      toast.success(res.message);
-      form.reset();
-    } else {
+      console.log("EmailJS result:", result.text);
+      toast.success("Message has been sent successfully!");
+      formRef.current.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error.text || error);
       toast.error("Something went wrong. Please try again.");
     }
   };
@@ -58,13 +68,14 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex w-full flex-col items-center justify-center gap-5 px-4 pt-16 text-gray-300"
+      className="flex w-full flex-col items-center justify-center gap-5 pt-24 text-gray-300"
     >
-      <h1 className="text-5xl text-cyan-500">Get In Touch</h1>
-      <div className="flex flex-col items-start justify-between gap-10 px-10 md:flex-row">
-        <div className="flex w-full flex-col gap-5 md:w-1/2">
-          <h1 className="text-3xl font-semibold text-cyan-500">Let's Talk</h1>
-          <p className="w-full text-justify md:w-2/3">
+      <h1 className="text-3xl font-bold text-cyan-500">Get In Touch</h1>
+      <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
+        {/* Left contact info */}
+        <div className="flex w-full flex-col gap-5">
+          <h1 className="text-2xl font-medium text-cyan-500">Let's Talk</h1>
+          <p className="w-full text-justify">
             Let’s connect! Whether you have a question, an opportunity, new
             projects, or just want to chat, I’d love to hear from you. Feel free
             to reach out via email or social media—I’ll get back to you as soon
@@ -74,13 +85,11 @@ const Contact = () => {
             <p className="flex items-center gap-3">
               <LuMail className="text-xl" /> <span>shrishthapaa@gmail.com</span>
             </p>
-
             <p className="flex items-center gap-3">
-              <MdOutlinePhone className="text-xl" /> <span>9825821503</span>
+              <MdOutlinePhone className="text-xl" /> <span>9763493276</span>
             </p>
-
             <p className="flex items-center gap-3">
-              <CiLocationOn className="text-xl hover:animate-pulse" />
+              <CiLocationOn className="text-xl text-gray-300" />
               <span>Bhaktapur, Nepal</span>
             </p>
           </div>
@@ -88,33 +97,39 @@ const Contact = () => {
             <a
               href="https://www.facebook.com/susil.thapa.3363334"
               aria-label="Connect on Facebook"
+              title="facebook"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF className="hover:animate-bounce" />
+              <FaFacebookF size={20} className="hover:text-[#0884FF]" />
             </a>
             <a
-              href="https://instagram.com/shrish.thapa"
-              aria-label="Connect on Instagram"
+              href="https://github.com/SusilThapa1"
+              aria-label="Github"
+              title="github"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GrInstagram className="hover:animate-spin" />
+              <FaGithub size={20} className="hover:text-gray-300" />
             </a>
             <a
               href="https://wa.me/9825821503"
               aria-label="Connect on WhatsApp"
+              title="whatsapp"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp className="hover:animate-pulse" />
+              <FaWhatsapp size={20} className="hover:text-green-600" />
             </a>
           </div>
         </div>
-        <div className="flex w-full md:w-1/2 md:items-center md:justify-center">
+
+        {/* Right form */}
+        <div className="flex w-full gap-5 md:items-center md:justify-center">
           <form
+            ref={formRef}
             onSubmit={onSubmit}
-            className="flex w-full flex-col gap-y-5 text-gray-300 sm:w-4/5 lg:max-w-md"
+            className="flex w-full flex-col gap-y-5 text-gray-300"
           >
             <label htmlFor="name" className="text-cyan-400">
               Your Name
@@ -123,13 +138,14 @@ const Contact = () => {
               type="text"
               name="name"
               id="name"
-              className="rounded-lg border-2 border-none bg-gray-600 px-4 py-3"
+              className="rounded-lg border border-gray-400 bg-transparent px-4 py-3 shadow-lg outline-none"
               placeholder="Enter your name"
               autoComplete="on"
             />
             {errors.name && (
               <span className="text-sm text-red-500">{errors.name}</span>
             )}
+
             <label htmlFor="email" className="text-cyan-400">
               Your Email
             </label>
@@ -137,31 +153,34 @@ const Contact = () => {
               type="text"
               name="email"
               id="email"
-              className="rounded-lg border-none bg-gray-600 px-4 py-3"
+              className="rounded-lg border border-gray-400 bg-transparent px-4 py-3 shadow-lg outline-none"
               placeholder="Enter your email"
               autoComplete="on"
             />
             {errors.email && (
               <span className="text-sm text-red-500">{errors.email}</span>
             )}
+
             <label htmlFor="message" className="text-cyan-400">
               Message
             </label>
             <textarea
               name="message"
               id="message"
-              placeholder="Message..."
-              className="h-40 resize-y overflow-hidden rounded-lg border-none bg-gray-600 px-4 py-3"
+              placeholder="Type your message here..."
+              className="h-40 resize-y overflow-hidden rounded-lg border border-gray-400 bg-transparent px-4 py-3 shadow-lg outline-none"
             />
             {errors.message && (
               <span className="text-sm text-red-500">{errors.message}</span>
             )}
+
             <div>
               <Button type="submit" text="Send Now" bg="custom-gradient" />
             </div>
           </form>
         </div>
       </div>
+      <hr className="w-full border border-gray-500" />
     </div>
   );
 };
