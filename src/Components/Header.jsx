@@ -46,7 +46,11 @@ const Header = () => {
         </a>
 
         <div onClick={handleMenu} className="cursor-pointer text-2xl md:hidden">
-          {menuOpen ? <IoClose /> : <FiMenu />}
+          {menuOpen ? (
+            <IoClose className="text-red-500" />
+          ) : (
+            <FiMenu className="text-cyan-400" />
+          )}
         </div>
       </div>
 

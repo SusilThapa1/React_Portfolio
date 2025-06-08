@@ -3,8 +3,7 @@ import Button from "./Button";
 import { LuMail } from "react-icons/lu";
 import { MdOutlinePhone } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
@@ -39,20 +38,12 @@ const Contact = () => {
     }
     setErrors({});
 
-    // Prepare profile pic URL with fallback & encode email safely
-    const profilePicUrl = formData.email
-      ? `https://i.pravatar.cc/150?u=${encodeURIComponent(formData.email)}`
-      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTML0gExaohZHdZW3609F12nUmVc14WXYNx_w&s";
-
     try {
       // Send form with extra params to EmailJS (see docs on passing custom params)
       const result = await emailjs.send(
         serviceID,
         templateID,
-        {
-          ...formData,
-          profile_pic_url: profilePicUrl,
-        },
+        formData,
         publicKey,
       );
 
@@ -68,14 +59,14 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex w-full flex-col items-center justify-center gap-5 pt-24 text-gray-300"
+      className="flex w-full flex-col items-center justify-center gap-5 pt-20 text-gray-300"
     >
-      <h1 className="text-3xl font-bold text-cyan-500">Get In Touch</h1>
+      <h1 className="text-3xl font-semibold text-cyan-500">Get In Touch</h1>
       <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
         {/* Left contact info */}
-        <div className="flex w-full flex-col gap-5">
+        <div className="flex w-full flex-col gap-5 text-justify text-sm leading-relaxed text-gray-400 md:text-lg">
           <h1 className="text-2xl font-medium text-cyan-500">Let's Talk</h1>
-          <p className="w-full text-justify">
+          <p className="">
             Let’s connect! Whether you have a question, an opportunity, new
             projects, or just want to chat, I’d love to hear from you. Feel free
             to reach out via email or social media—I’ll get back to you as soon
@@ -101,7 +92,10 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF size={20} className="hover:text-[#0884FF]" />
+              <FaFacebook
+                size={25}
+                className="transition-colors duration-300 hover:text-[#0884FF]"
+              />
             </a>
             <a
               href="https://github.com/SusilThapa1"
@@ -110,7 +104,10 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub size={20} className="hover:text-gray-300" />
+              <FaGithub
+                size={25}
+                className="transition-colors duration-300 hover:text-gray-300"
+              />
             </a>
             <a
               href="https://wa.me/9825821503"
@@ -119,7 +116,10 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp size={20} className="hover:text-green-600" />
+              <FaWhatsapp
+                size={25}
+                className="transition-colors duration-300 hover:text-green-600"
+              />
             </a>
           </div>
         </div>
@@ -129,16 +129,16 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={onSubmit}
-            className="flex w-full flex-col gap-y-5 text-gray-300"
+            className="flex w-full flex-col gap-y-3 text-sm leading-relaxed text-gray-300 md:text-lg"
           >
-            <label htmlFor="name" className="text-cyan-400">
+            <label htmlFor="name" className="text-cyan-500">
               Your Name
             </label>
             <input
               type="text"
               name="name"
               id="name"
-              className="rounded-lg border border-gray-400 bg-transparent px-4 py-3 shadow-lg outline-none"
+              className="rounded-lg border border-gray-600 bg-transparent px-3 py-2 shadow-lg outline-none"
               placeholder="Enter your name"
               autoComplete="on"
             />
@@ -146,14 +146,14 @@ const Contact = () => {
               <span className="text-sm text-red-500">{errors.name}</span>
             )}
 
-            <label htmlFor="email" className="text-cyan-400">
+            <label htmlFor="email" className="text-cyan-500">
               Your Email
             </label>
             <input
               type="text"
               name="email"
               id="email"
-              className="rounded-lg border border-gray-400 bg-transparent px-4 py-3 shadow-lg outline-none"
+              className="rounded-lg border border-gray-600 bg-transparent px-3 py-2 shadow-lg outline-none"
               placeholder="Enter your email"
               autoComplete="on"
             />
@@ -161,21 +161,21 @@ const Contact = () => {
               <span className="text-sm text-red-500">{errors.email}</span>
             )}
 
-            <label htmlFor="message" className="text-cyan-400">
+            <label htmlFor="message" className="text-cyan-500">
               Message
             </label>
             <textarea
               name="message"
               id="message"
               placeholder="Type your message here..."
-              className="h-40 resize-y overflow-hidden rounded-lg border border-gray-400 bg-transparent px-4 py-3 shadow-lg outline-none"
+              className="h-40 resize-y overflow-hidden rounded-lg border border-gray-600 bg-transparent px-3 py-2 shadow-lg outline-none"
             />
             {errors.message && (
               <span className="text-sm text-red-500">{errors.message}</span>
             )}
 
             <div>
-              <Button type="submit" text="Send Now" bg="custom-gradient" />
+              <Button type="submit" text="Send Now" />
             </div>
           </form>
         </div>
