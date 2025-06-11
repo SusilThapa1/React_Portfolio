@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
 import heroImage from "../assets/file.png";
 import Button from "./Button";
 
@@ -34,22 +35,52 @@ const Hero = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex w-full items-center justify-center gap-5 text-sm md:justify-start">
-            <a href="#contact" className="w-auto">
-              <Button
-                type="button"
-                bg="custom-gradient"
-                text="Connect With Me"
-              />
-            </a>
-            <a
-              href="/Frontend_Developer_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-auto"
-            >
-              <Button type="button" text="See My Resume" />
-            </a>
+          <div className="flex w-full flex-col items-center gap-3 md:items-start">
+            <div className="flex w-full items-center justify-center gap-5 text-sm md:justify-start">
+              <a href="#contact" className="w-auto">
+                <Button
+                  type="button"
+                  bg="custom-gradient"
+                  text="Connect With Me"
+                />
+              </a>
+              <a
+                href="/Frontend_Developer_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-auto"
+              >
+                <Button type="button" text="See My Resume" />
+              </a>
+            </div>
+
+            {/* Social Icons */}
+            <div className="mt-4 flex w-full items-center gap-5 text-2xl text-cyan-500">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-blue-600"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://wa.me/yourNumberHere"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-green-500"
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href="https://github.com/yourGithubUsername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gray-700"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
         </div>
       </div>
