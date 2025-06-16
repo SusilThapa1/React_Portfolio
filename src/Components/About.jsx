@@ -1,5 +1,4 @@
-import React from "react";
-import image from "../assets/hello.jpg";
+import image from "../assets/hel.png";
 import Education from "./Education";
 const About = () => {
   return (
@@ -7,7 +6,9 @@ const About = () => {
       id="about"
       className="flex w-full flex-col items-center justify-center pt-20 text-center text-gray-300"
     >
-      <h1 className="mb-10 text-3xl font-semibold text-cyan-500">About Me</h1>
+      <h1 className="mb-10 bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-3xl font-semibold text-transparent">
+        About Me
+      </h1>
       <div className="flex w-full flex-col items-center justify-center gap-10 text-justify md:text-center">
         <p className="text-justify text-sm leading-relaxed text-gray-400 md:text-lg">
           I am a passionate frontend developer with a knack for crafting

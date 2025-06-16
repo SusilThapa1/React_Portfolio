@@ -46,7 +46,7 @@ const Projects = () => {
       id="projects"
       className="flex flex-col items-center gap-10 pt-20 text-gray-300"
     >
-      <h1 className="text-center text-3xl font-semibold text-cyan-500">
+      <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-center text-3xl font-semibold text-transparent">
         My Projects
       </h1>
       <div className="grid w-full grid-cols-1 gap-10 pb-20 md:grid-cols-2 lg:grid-cols-3">

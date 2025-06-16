@@ -61,11 +61,15 @@ const Contact = () => {
       id="contact"
       className="flex w-full flex-col items-center justify-center gap-5 pt-20 text-gray-300"
     >
-      <h1 className="text-3xl font-semibold text-cyan-500">Get In Touch</h1>
+      <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-3xl font-semibold text-transparent">
+        Get In Touch
+      </h1>
       <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
         {/* Left contact info */}
         <div className="flex w-full flex-col gap-5 text-justify text-sm leading-relaxed text-gray-400 md:text-lg">
-          <h1 className="text-2xl font-medium text-cyan-500">Let's Talk</h1>
+          <h1 className="bg-gradient-to-l from-pink-400 to-yellow-400 bg-clip-text text-2xl font-medium text-transparent">
+            Let's Talk
+          </h1>
           <p className="">
             Let’s connect! Whether you have a question, an opportunity, new
             projects, or just want to chat, I’d love to hear from you. Feel free
@@ -131,7 +135,10 @@ const Contact = () => {
             onSubmit={onSubmit}
             className="flex w-full flex-col gap-y-3 text-sm leading-relaxed text-gray-300 md:text-lg"
           >
-            <label htmlFor="name" className="text-cyan-500">
+            <label
+              htmlFor="name"
+              className="bg-gradient-to-t from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+            >
               Your Name
             </label>
             <input
@@ -146,7 +153,10 @@ const Contact = () => {
               <span className="text-sm text-red-500">{errors.name}</span>
             )}
 
-            <label htmlFor="email" className="text-cyan-500">
+            <label
+              htmlFor="email"
+              className="bg-gradient-to-b from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+            >
               Your Email
             </label>
             <input
@@ -161,7 +171,10 @@ const Contact = () => {
               <span className="text-sm text-red-500">{errors.email}</span>
             )}
 
-            <label htmlFor="message" className="text-cyan-500">
+            <label
+              htmlFor="message"
+              className="bg-gradient-to-t from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+            >
               Message
             </label>
             <textarea

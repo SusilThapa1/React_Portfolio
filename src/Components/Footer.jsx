@@ -11,7 +11,7 @@ const Footer = () => {
             <p>Contact me</p>
           </a>
         </div> */}
-        <p className="text-center md:text-lg">
+        <p className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-center text-transparent md:text-lg">
           © {new Date().getFullYear()} Susil Thapa. All rights reserved.
         </p>
       </div>

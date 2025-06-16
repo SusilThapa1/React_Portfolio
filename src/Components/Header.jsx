@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full bg-[#1a1a1a] px-5 shadow-lg md:px-10 lg:px-20">
       <div className="relative z-20 flex items-center justify-between py-3">
-        <h1 className="cursor-pointer text-2xl font-bold text-cyan-500">
+        <h1 className="cursor-pointer bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-2xl font-bold text-transparent">
           S.THAPA
         </h1>
 
@@ -34,7 +34,7 @@ const Header = () => {
             <li
               onClick={() => handleActiveLink(navLink.name)}
               key={index}
-              className={`cursor-pointer font-medium transition-colors duration-500 hover:text-cyan-400 ${activeNavLink === navLink.name ? "text-cyan-500" : ""}`}
+              className={`cursor-pointer from-pink-400 to-yellow-400 font-medium transition-colors duration-500 hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent ${activeNavLink === navLink.name ? "bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent" : ""}`}
             >
               <a href={navLink.link}>{navLink.name}</a>
             </li>
@@ -66,7 +66,7 @@ const Header = () => {
               handleActiveLink(navLink.name), setMenuOpen(false);
             }}
             key={index}
-            className={`cursor-pointer font-medium transition-colors duration-500 hover:text-cyan-400 ${activeNavLink === navLink.name ? "text-cyan-500" : ""}`}
+            className={`cursor-pointer font-medium transition-colors duration-500 hover:text-cyan-400 ${activeNavLink === navLink.name ? "bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent" : ""}`}
           >
             <a href={navLink.link}>{navLink.name}</a>
           </li>

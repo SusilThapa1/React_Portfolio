@@ -33,7 +33,9 @@ const Skills = () => {
       className="flex w-full flex-col items-center justify-center gap-8 pt-20 text-gray-300"
     >
       <div className="flex w-full flex-col items-center justify-center gap-6 text-center">
-        <h1 className="text-3xl font-semibold text-cyan-500">My Skills</h1>
+        <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-3xl font-semibold text-transparent">
+          My Skills
+        </h1>
         <p className="text-justify text-sm leading-relaxed text-gray-400 md:text-lg">
           I specialize in building full-stack web applications using the MERN
           stack. I have strong experience with React, Next.js, and Tailwind CSS
@@ -47,10 +49,10 @@ const Skills = () => {
         {icons.map((item, index) => (
           <div
             key={index}
-            className="group flex flex-col items-center justify-center gap-3 rounded-lg border-2 border-gray-800 p-5 shadow-lg transition-all duration-500 hover:scale-105 hover:border-cyan-500"
+            className="group flex flex-col items-center justify-center gap-3 rounded-lg border-2 border-gray-800 p-5 shadow-lg transition-all duration-500 hover:scale-105 hover:border-yellow-400"
           >
             <div className="text-6xl">{item.icon}</div>
-            <h1 className="text-sm font-medium text-gray-200 group-hover:text-cyan-400 md:text-lg">
+            <h1 className="text-sm font-medium text-gray-200 group-hover:text-yellow-400 md:text-lg">
               {item.name}
             </h1>
           </div>

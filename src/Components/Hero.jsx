@@ -21,7 +21,7 @@ const Hero = () => {
 
         {/* Text Section */}
         <div className="flex flex-col items-center justify-center gap-5 text-center md:items-start">
-          <h1 className="text-xl font-semibold text-cyan-500 sm:text-2xl md:text-4xl">
+          <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl md:text-4xl">
             I'm Susil Thapa,
           </h1>
           <span className="lg:2xl mt-1 text-lg font-semibold text-gray-400 md:text-xl">
@@ -55,9 +55,9 @@ const Hero = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="mt-4 flex w-full items-center gap-5 text-2xl text-cyan-500">
+            <div className="mt-4 flex w-full items-center gap-5 bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-2xl text-transparent">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/susil.thapa.3363334"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-blue-600"
@@ -65,7 +65,7 @@ const Hero = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://wa.me/yourNumberHere"
+                href="https://wa.me/9825821503"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-green-500"
@@ -73,7 +73,7 @@ const Hero = () => {
                 <FaWhatsapp />
               </a>
               <a
-                href="https://github.com/yourGithubUsername"
+                href="https://github.com/SusilThapa1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-gray-700"
