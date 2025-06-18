@@ -44,9 +44,9 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex flex-col items-center gap-10 pt-20 text-gray-300"
+      className="flex scroll-mt-20 flex-col items-center gap-10 py-10"
     >
-      <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-center text-3xl font-semibold text-transparent">
+      <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-center text-3xl font-semibold text-transparent">
         My Projects
       </h1>
       <div className="grid w-full grid-cols-1 gap-10 pb-20 md:grid-cols-2 lg:grid-cols-3">
@@ -61,17 +61,15 @@ const Projects = () => {
               className="object-fit aspect-[9/5] h-auto w-auto rounded-lg"
             />
             <h1 className="text-lg font-semibold md:text-xl">{projImg.name}</h1>
-            <p className="text-sm md:text-lg">
-              Technologies used: {projImg.tech}
-            </p>
+            <p className="text-sm md:text-lg">Tech Stack: {projImg.tech}</p>
 
             <a href={projImg.gitLink} target="blank">
-              <Button text="View Code" bg="bg-cyan-400" />
+              <Button text="View Code" />
             </a>
           </div>
         ))}
       </div>
-      <hr className="w-full border border-gray-500" />
+      <hr className="w-full border border-gray-300" />
     </div>
   );
 };

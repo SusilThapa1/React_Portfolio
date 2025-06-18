@@ -7,13 +7,13 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="flex min-h-screen w-full flex-col items-center justify-center pt-20"
+      className="flex h-screen w-full scroll-mt-20 flex-col items-center justify-center pt-24"
     >
       <div className="flex w-full flex-col items-center gap-5 pb-20 text-center md:flex-row-reverse md:justify-center md:gap-20 md:text-left lg:justify-evenly">
         {/* Image Section */}
-        <div className="mb-5 h-40 w-40 md:h-60 md:w-60 lg:h-72 lg:w-72">
+        <div className="mb-5 h-40 w-40 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 p-1 md:h-60 md:w-60 lg:h-72 lg:w-72">
           <img
-            className="h-full w-full rounded-full border-4 border-dotted border-cyan-600 object-cover transition-colors duration-500"
+            className="h-full w-full rounded-full bg-[#2c2c2c] object-cover transition-colors duration-500"
             src={heroImage}
             alt="profile"
           />
@@ -21,13 +21,13 @@ const Hero = () => {
 
         {/* Text Section */}
         <div className="flex flex-col items-center justify-center gap-5 text-center md:items-start">
-          <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl md:text-4xl">
+          <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl md:text-4xl">
             I'm Susil Thapa,
           </h1>
-          <span className="lg:2xl mt-1 text-lg font-semibold text-gray-400 md:text-xl">
+          <span className="lg:2xl mt-1 text-lg font-semibold text-gray-800 md:text-xl">
             frontend developer based in Nepal.
           </span>
-          <p className="text-justify text-sm leading-relaxed text-gray-400 md:max-w-md md:text-lg">
+          <p className="text-justify text-sm leading-relaxed text-gray-600 md:max-w-md md:text-lg">
             I’m a frontend developer focused on building clean, responsive, and
             user-friendly web interfaces with React and Tailwind CSS. I know the
             basics of Next.js and I’m learning backend technologies to become a
@@ -55,12 +55,13 @@ const Hero = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="mt-4 flex w-full items-center gap-5 bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-2xl text-transparent">
+            <div className="mt-4 flex w-full items-center gap-5 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl text-gray-800 text-transparent">
               <a
                 href="https://www.facebook.com/susil.thapa.3363334"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-blue-600"
+                title="faebook"
+                className="transition-all duration-500 hover:-translate-y-2 hover:text-blue-600"
               >
                 <FaFacebookF />
               </a>
@@ -68,7 +69,8 @@ const Hero = () => {
                 href="https://wa.me/9825821503"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-green-500"
+                title="whatsapp"
+                className="transition-all duration-500 hover:-translate-y-2 hover:text-green-500"
               >
                 <FaWhatsapp />
               </a>
@@ -76,7 +78,8 @@ const Hero = () => {
                 href="https://github.com/SusilThapa1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-gray-700"
+                title="github"
+                className="transition-all duration-500 hover:-translate-y-2 hover:text-gray-600"
               >
                 <FaGithub />
               </a>
@@ -84,7 +87,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <hr className="w-full border border-gray-500" />
+      <hr className="w-full border border-gray-300" />
     </main>
   );
 };

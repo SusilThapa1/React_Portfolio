@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import Button from "./Button";
 import { LuMail } from "react-icons/lu";
 import { MdOutlinePhone } from "react-icons/md";
-import { CiLocationOn } from "react-icons/ci";
+import { FaLocationDot } from "react-icons/fa6";
 import { FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
@@ -59,15 +59,15 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex w-full flex-col items-center justify-center gap-5 pt-20 text-gray-300"
+      className="flex w-full flex-col items-center justify-center gap-5 py-10"
     >
-      <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-3xl font-semibold text-transparent">
+      <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-3xl font-semibold text-transparent">
         Get In Touch
       </h1>
       <div className="flex flex-col items-start justify-between gap-10 md:flex-row">
         {/* Left contact info */}
-        <div className="flex w-full flex-col gap-5 text-justify text-sm leading-relaxed text-gray-400 md:text-lg">
-          <h1 className="bg-gradient-to-l from-pink-400 to-yellow-400 bg-clip-text text-2xl font-medium text-transparent">
+        <div className="flex w-full flex-col gap-5 text-justify text-sm leading-relaxed text-gray-600 md:text-lg">
+          <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl font-medium text-transparent">
             Let's Talk
           </h1>
           <p className="">
@@ -84,11 +84,11 @@ const Contact = () => {
               <MdOutlinePhone className="text-xl" /> <span>9763493276</span>
             </p>
             <p className="flex items-center gap-3">
-              <CiLocationOn className="text-xl text-gray-300" />
+              <FaLocationDot className="text-xl" />
               <span>Bhaktapur, Nepal</span>
             </p>
           </div>
-          <div className="flex items-center gap-5 text-xl text-gray-400">
+          <div className="flex items-center gap-5 text-xl text-gray-800">
             <a
               href="https://www.facebook.com/susil.thapa.3363334"
               aria-label="Connect on Facebook"
@@ -110,7 +110,7 @@ const Contact = () => {
             >
               <FaGithub
                 size={25}
-                className="transition-colors duration-300 hover:text-gray-300"
+                className="hover: transition-colors duration-300"
               />
             </a>
             <a
@@ -133,11 +133,11 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={onSubmit}
-            className="flex w-full flex-col gap-y-3 text-sm leading-relaxed text-gray-300 md:text-lg"
+            className="flex w-full flex-col gap-y-3 text-sm leading-relaxed md:text-lg"
           >
             <label
               htmlFor="name"
-              className="bg-gradient-to-t from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+              className="bg-gradient-to-t from-cyan-400 to-blue-600 bg-clip-text text-transparent"
             >
               Your Name
             </label>
@@ -145,7 +145,7 @@ const Contact = () => {
               type="text"
               name="name"
               id="name"
-              className="rounded-lg border border-gray-600 bg-transparent px-3 py-2 shadow-lg outline-none"
+              className="rounded-lg border border-yellow-50 bg-transparent px-3 py-2 shadow-lg outline-none"
               placeholder="Enter your name"
               autoComplete="on"
             />
@@ -155,7 +155,7 @@ const Contact = () => {
 
             <label
               htmlFor="email"
-              className="bg-gradient-to-b from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+              className="bg-gradient-to-b from-cyan-400 to-blue-600 bg-clip-text text-transparent"
             >
               Your Email
             </label>
@@ -163,7 +163,7 @@ const Contact = () => {
               type="text"
               name="email"
               id="email"
-              className="rounded-lg border border-gray-600 bg-transparent px-3 py-2 shadow-lg outline-none"
+              className="rounded-lg border border-yellow-50 bg-transparent px-3 py-2 shadow-lg outline-none"
               placeholder="Enter your email"
               autoComplete="on"
             />
@@ -173,7 +173,7 @@ const Contact = () => {
 
             <label
               htmlFor="message"
-              className="bg-gradient-to-t from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+              className="bg-gradient-to-t from-cyan-400 to-blue-600 bg-clip-text text-transparent"
             >
               Message
             </label>
@@ -181,19 +181,20 @@ const Contact = () => {
               name="message"
               id="message"
               placeholder="Type your message here..."
-              className="h-40 resize-y overflow-hidden rounded-lg border border-gray-600 bg-transparent px-3 py-2 shadow-lg outline-none"
+              className="h-40 resize-y overflow-hidden rounded-lg border border-yellow-50 bg-transparent px-3 py-2 shadow-lg outline-none"
             />
             {errors.message && (
               <span className="text-sm text-red-500">{errors.message}</span>
             )}
 
-            <div>
-              <Button type="submit" text="Send Now" />
+            <div className="group flex w-max cursor-pointer items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gradient-to-r from-cyan-400 to-blue-600 p-2 text-base text-gray-200 transition-all duration-500 hover:scale-105">
+              <button type="submit">Send Message</button>
+              <IoIosSend className="transition-all duration-500 group-hover:rotate-45" />
             </div>
           </form>
         </div>
       </div>
-      <hr className="w-full border border-gray-500" />
+      <hr className="w-full border border-gray-300" />
     </div>
   );
 };

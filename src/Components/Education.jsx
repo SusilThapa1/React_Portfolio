@@ -34,15 +34,15 @@ const Education = () => {
     },
   ];
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-10 pb-20 text-sm leading-relaxed text-gray-400 md:text-lg">
-      <h1 className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-center text-3xl font-semibold text-transparent">
+    <div className="flex w-full flex-col items-center justify-center gap-10 pb-20 text-sm leading-relaxed text-gray-600 md:text-lg">
+      <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-center text-3xl font-semibold text-transparent">
         My Education
       </h1>
       <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:flex-row lg:grid-cols-3">
         {qualifications.map((qualification, index) => (
           <div
             key={index}
-            className="flex h-auto flex-col gap-5 rounded-md border border-gray-800 bg-transparent p-2 text-left shadow-xl transition-all duration-700 hover:border-yellow-400 md:hover:scale-105"
+            className="flex h-auto flex-col gap-5 rounded-xl border-2 border-gray-200 bg-transparent p-2 text-left shadow-xl transition-all duration-500 hover:border-blue-300 md:hover:-translate-y-4"
           >
             <h2 className="text-center text-[16px] font-semibold underline md:text-xl">
               {qualification.name}

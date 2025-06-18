@@ -23,9 +23,9 @@ const Header = () => {
   };
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full bg-[#1a1a1a] px-5 shadow-lg md:px-10 lg:px-20">
+    <nav className="fixed left-0 top-0 z-50 w-full bg-transparent px-5 shadow-lg backdrop-blur-md md:px-10 lg:px-20">
       <div className="relative z-20 flex items-center justify-between py-3">
-        <h1 className="cursor-pointer bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-2xl font-bold text-transparent">
+        <h1 className="cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl font-bold text-transparent">
           S.THAPA
         </h1>
 
@@ -34,7 +34,7 @@ const Header = () => {
             <li
               onClick={() => handleActiveLink(navLink.name)}
               key={index}
-              className={`cursor-pointer from-pink-400 to-yellow-400 font-medium transition-colors duration-500 hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent ${activeNavLink === navLink.name ? "bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent" : ""}`}
+              className={`cursor-pointer from-cyan-400 to-blue-600 font-medium transition-colors duration-500 hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent ${activeNavLink === navLink.name ? "bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent" : ""}`}
             >
               <a href={navLink.link}>{navLink.name}</a>
             </li>
@@ -56,7 +56,7 @@ const Header = () => {
 
       {/* mobile menu */}
       <ul
-        className={`absolute right-0 top-16 z-10 flex h-screen w-1/2 flex-col items-center gap-14 bg-[#1a1a1a] p-5 font-semibold text-gray-300 transition-transform duration-500 ease-in-out md:hidden ${
+        className={`absolute right-0 top-16 z-10 flex h-screen w-1/2 flex-col items-center gap-14 bg-[#1a1a1a] p-5 font-semibold transition-transform duration-500 ease-in-out md:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -66,7 +66,7 @@ const Header = () => {
               handleActiveLink(navLink.name), setMenuOpen(false);
             }}
             key={index}
-            className={`cursor-pointer font-medium transition-colors duration-500 hover:text-cyan-400 ${activeNavLink === navLink.name ? "bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent" : ""}`}
+            className={`cursor-pointer font-medium transition-colors duration-500 hover:text-cyan-400 ${activeNavLink === navLink.name ? "bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent" : ""}`}
           >
             <a href={navLink.link}>{navLink.name}</a>
           </li>

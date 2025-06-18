@@ -10,16 +10,18 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="font-sans text-white">
+    <>
       <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <ToastContainer position="top-center" />
-    </div>
+      <div className="">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+        <ToastContainer position="top-center" />
+      </div>
+    </>
   );
 }
 
