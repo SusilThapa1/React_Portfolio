@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex w-full scroll-mt-20 flex-col items-center justify-center text-center"
+      className="flex w-full scroll-mt-20 flex-col items-center justify-center pt-20 text-center"
     >
       <h1 className="mb-10 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-3xl font-semibold text-transparent">
         About Me
@@ -28,31 +28,23 @@ const About = () => {
               <span className="font-semibold">Name:</span>
               <span className="text-color2">Susil Thapa</span>
             </div>
-            <div className="flex items-center justify-start gap-4 text-center">
-              <span className="font-semibold">Date Of birth:</span>
-              <span className="text-color2">November 05, 2001</span>
-            </div>
+
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Address:</span>
-              <span className="text-color2">Bardibas, Mahottari</span>
+              <span className="text-color2">Duwakot, Bhaktapur</span>
             </div>
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Zip code:</span>
-              <span className="text-color2">45700</span>
+              <span className="text-color2">44800</span>
             </div>
             <div className="flex items-center justify-start gap-4 text-center">
               <span className="font-semibold">Email:</span>
               <span className="text-color2">shrishthapaa@gmail.com</span>
             </div>
-            <div className="flex items-center justify-start gap-4 text-center">
-              <span className="font-semibold">Phone:</span>
-              <span className="text-color2">9763493276</span>
-            </div>
           </div>
         </div>
         <Education />
       </div>
-      <hr className="w-full border border-gray-300" />
     </section>
   );
 };

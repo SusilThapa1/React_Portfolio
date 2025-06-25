@@ -56,7 +56,7 @@ const Header = () => {
 
       {/* mobile menu */}
       <ul
-        className={`absolute right-0 top-16 z-10 flex h-screen w-1/2 flex-col items-center gap-14 bg-[#1a1a1a] p-5 font-semibold transition-transform duration-500 ease-in-out md:hidden ${
+        className={`absolute right-0 top-[56px] z-10 flex h-screen w-1/2 flex-col items-center gap-14 bg-gray-200 p-5 font-semibold transition-transform duration-500 ease-in-out md:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

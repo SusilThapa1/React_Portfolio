@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { LuMail } from "react-icons/lu";
-import { MdOutlinePhone } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
@@ -39,7 +38,6 @@ const Contact = () => {
     setErrors({});
 
     try {
-      // Send form with extra params to EmailJS (see docs on passing custom params)
       const result = await emailjs.send(
         serviceID,
         templateID,
@@ -80,9 +78,7 @@ const Contact = () => {
             <p className="flex items-center gap-3">
               <LuMail className="text-xl" /> <span>shrishthapaa@gmail.com</span>
             </p>
-            <p className="flex items-center gap-3">
-              <MdOutlinePhone className="text-xl" /> <span>9763493276</span>
-            </p>
+
             <p className="flex items-center gap-3">
               <FaLocationDot className="text-xl" />
               <span>Bhaktapur, Nepal</span>
@@ -110,7 +106,7 @@ const Contact = () => {
             >
               <FaGithub
                 size={25}
-                className="hover: transition-colors duration-300"
+                className="transition-colors duration-300 hover:text-gray-500"
               />
             </a>
             <a
@@ -194,7 +190,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <hr className="w-full border border-gray-300" />
     </div>
   );
 };

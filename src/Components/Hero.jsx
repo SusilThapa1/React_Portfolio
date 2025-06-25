@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
 import heroImage from "../assets/file.png";
 import Button from "./Button";
@@ -7,9 +6,9 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="flex h-screen w-full scroll-mt-20 flex-col items-center justify-center pt-24"
+      className="flex w-full scroll-mt-20 flex-col items-center justify-center py-20 md:h-screen"
     >
-      <div className="flex w-full flex-col items-center gap-5 pb-20 text-center md:flex-row-reverse md:justify-center md:gap-20 md:text-left lg:justify-evenly">
+      <div className="flex w-full flex-col items-center gap-5 text-center md:flex-row-reverse md:justify-center md:gap-20 md:text-left lg:justify-evenly">
         {/* Image Section */}
         <div className="mb-5 h-40 w-40 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 p-1 md:h-60 md:w-60 lg:h-72 lg:w-72">
           <img
@@ -45,7 +44,7 @@ const Hero = () => {
                 />
               </a>
               <a
-                href="/Frontend_Developer_Resume.pdf"
+                href="/SusilThapaResume1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-auto"
@@ -55,12 +54,12 @@ const Hero = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="mt-4 flex w-full items-center gap-5 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl text-gray-800 text-transparent">
+            <div className="mt-4 flex w-full items-center justify-center gap-5 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl text-gray-800 md:justify-start">
               <a
                 href="https://www.facebook.com/susil.thapa.3363334"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="faebook"
+                title="facebook"
                 className="transition-all duration-500 hover:-translate-y-2 hover:text-blue-600"
               >
                 <FaFacebookF />
@@ -87,7 +86,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <hr className="w-full border border-gray-300" />
     </main>
   );
 };

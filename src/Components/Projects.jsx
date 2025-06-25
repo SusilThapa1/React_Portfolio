@@ -1,20 +1,26 @@
-import React from "react";
-import proj1 from "../assets/proj1.png";
-import proj2 from "../assets/proj2.png";
+// import proj1 from "../assets/proj1.png";
+import video1 from "../assets/paperScissorRock.mp4";
+import video2 from "../assets/TourAndTravel.mp4";
 import proj3 from "../assets/proj3.png";
 import proj4 from "../assets/proj4.png";
-import proj5 from "../assets/proj5.png";
+import video3 from "../assets/DiceRoll.mp4";
 import proj6 from "../assets/proj6.png";
 import Button from "./Button";
 const Projects = () => {
   const projectImages = [
     {
       name: "Rock Paper Scissor Game",
-      image: proj1,
+      // image: proj1,
+      video: video1,
       tech: "HTML,CSS,Javascript",
-      gitLink: "",
+      gitLink: "https://github.com/SusilThapa1/Game",
     },
-    { name: "Hotel and Resort", image: proj2, tech: "HTML,CSS", gitLink: "" },
+    {
+      name: "Tour and Travels",
+      video: video2,
+      tech: "React, Tailwind CSS",
+      gitLink: "https://github.com/SusilThapa1/TourAndTravelWeb",
+    },
     {
       name: "Personal Portfolio",
       image: proj3,
@@ -29,9 +35,9 @@ const Projects = () => {
     },
     {
       name: "Dice Game",
-      image: proj5,
+      video: video3,
       tech: "React , CSS Modules",
-      gitLink: "",
+      gitLink: "https://github.com/SusilThapa1/Dice_Roll_Game",
     },
     {
       name: "Dummy Products",
@@ -55,11 +61,21 @@ const Projects = () => {
             key={i}
             className="flex h-auto w-auto flex-col justify-center gap-5 rounded-lg bg-transparent"
           >
-            <img
-              src={projImg.image}
-              alt="Project"
-              className="object-fit aspect-[9/5] h-auto w-auto rounded-lg"
-            />
+            {projImg.image ? (
+              <img
+                src={projImg.image}
+                alt="Project"
+                className="object-fit aspect-[9/5] h-auto w-auto rounded-lg"
+              />
+            ) : (
+              <video
+                src={projImg.video}
+                autoPlay
+                loop
+                className="object-fit aspect-video h-auto w-auto rounded-lg"
+              />
+            )}
+
             <h1 className="text-lg font-semibold md:text-xl">{projImg.name}</h1>
             <p className="text-sm md:text-lg">Tech Stack: {projImg.tech}</p>
 
@@ -69,7 +85,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <hr className="w-full border border-gray-300" />
     </div>
   );
 };

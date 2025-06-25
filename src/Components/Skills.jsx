@@ -58,7 +58,6 @@ const Skills = () => {
           </div>
         ))}
       </div>
-      <hr className="w-full border border-gray-300" />
     </div>
   );
 };
