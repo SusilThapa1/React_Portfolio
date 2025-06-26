@@ -63,40 +63,7 @@ Showcases my projects, skills, education, and contact information.
 
 5. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Build for Production
-
-```sh
-npm run build
-```
-
-### Preview Production Build
-
-```sh
-npm run preview
-```
-
-## Project Structure
-
-```
-├── public/
-│   ├── Frontend_Developer_Resume.pdf
-│   └── me.png
-├── src/
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── index.css
-│   ├── assets/
-│   └── Components/
-│       ├── About.jsx
-│       ├── Button.jsx
-│       ├── Contact.jsx
-│       ├── Education.jsx
-│       ├── Footer.jsx
-│       ├── Header.jsx
-│       ├── Hero.jsx
-│       ├── Projects.jsx
-│       └── Skills.jsx
-```
+ 
 
 ## License
 
@@ -104,4 +71,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Made with ❤️ by Susil Thapa**
+**Made by Susil Thapa**
