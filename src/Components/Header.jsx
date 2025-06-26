@@ -4,7 +4,6 @@ import { IoClose } from "react-icons/io5";
 import Button from "./Button";
 
 const Header = () => {
-  // const navLinks = ["Home", "About Me", "Services", "Skills", "Contact"];
   const navLinks = [
     { link: "#home", name: "Home" },
     { link: "#about", name: "About me" },
@@ -22,10 +21,17 @@ const Header = () => {
     setActiveNavLink(navLink);
   };
 
+  const goToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className="fixed left-0 top-0 z-50 w-full bg-transparent px-5 shadow-lg backdrop-blur-md md:px-10 lg:px-20">
       <div className="relative z-20 flex items-center justify-between py-3">
-        <h1 className="cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl font-bold text-transparent">
+        <h1
+          onClick={goToTop}
+          className="cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl font-bold text-transparent"
+        >
           S.THAPA
         </h1>
 

@@ -50,7 +50,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex scroll-mt-20 flex-col items-center gap-10 py-10"
+      className="flex scroll-mt-16 flex-col items-center gap-10 py-10"
     >
       <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-center text-3xl font-semibold text-transparent">
         My Projects

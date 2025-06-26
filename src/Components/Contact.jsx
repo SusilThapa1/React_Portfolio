@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { LuMail } from "react-icons/lu";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaFacebook, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
@@ -57,7 +57,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex w-full flex-col items-center justify-center gap-5 py-10"
+      className="flex w-full scroll-mt-16 flex-col items-center justify-center gap-5 py-10"
     >
       <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-3xl font-semibold text-transparent">
         Get In Touch
@@ -120,6 +120,15 @@ const Contact = () => {
                 size={25}
                 className="transition-colors duration-300 hover:text-green-600"
               />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/susilthapa1"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="linkedin"
+              className="transition-all duration-500 hover:text-sky-600"
+            >
+              <FaLinkedin />
             </a>
           </div>
         </div>

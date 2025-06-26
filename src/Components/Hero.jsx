@@ -1,12 +1,13 @@
 import { FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
 import heroImage from "../assets/file.png";
 import Button from "./Button";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Hero = () => {
   return (
     <main
       id="home"
-      className="flex w-full scroll-mt-20 flex-col items-center justify-center py-20 md:h-screen"
+      className="flex w-full scroll-mt-16 flex-col items-center justify-center py-20 md:h-screen"
     >
       <div className="flex w-full flex-col items-center gap-5 text-center md:flex-row-reverse md:justify-center md:gap-20 md:text-left lg:justify-evenly">
         {/* Image Section */}
@@ -44,7 +45,7 @@ const Hero = () => {
                 />
               </a>
               <a
-                href="/SusilThapaResume1.pdf"
+                href="/SusilThapaResume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-auto"
@@ -81,6 +82,15 @@ const Hero = () => {
                 className="transition-all duration-500 hover:-translate-y-2 hover:text-gray-600"
               >
                 <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/susilthapa1"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="linkedin"
+                className="transition-all duration-500 hover:-translate-y-2 hover:text-sky-600"
+              >
+                <FaLinkedin />
               </a>
             </div>
           </div>

@@ -30,7 +30,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="flex w-full scroll-mt-20 flex-col items-center justify-center gap-8 py-10"
+      className="flex w-full scroll-mt-16 flex-col items-center justify-center gap-8 py-10"
     >
       <div className="flex w-full flex-col items-center justify-center gap-6 text-center">
         <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-3xl font-semibold text-transparent">
