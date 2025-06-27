@@ -12,7 +12,7 @@ const Header = () => {
     { link: "#contact", name: "Contact" },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeNavLink, setActiveNavLink] = useState("Home");
+  const [activeNavLink, setActiveNavLink] = useState("");
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
