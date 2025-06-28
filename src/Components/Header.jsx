@@ -28,12 +28,15 @@ const Header = () => {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full bg-transparent px-5 shadow-lg backdrop-blur-md md:px-10 lg:px-20">
       <div className="relative z-20 flex items-center justify-between py-3">
-        <h1
-          onClick={goToTop}
-          className="cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl font-bold text-transparent"
-        >
-          S.THAPA
-        </h1>
+        <div className="flex items-center gap-3">
+          <img src="/favicon.png" alt="Logo" className="h-10" />
+          <h1
+            onClick={goToTop}
+            className="cursor-pointer bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-2xl font-bold text-transparent"
+          >
+            S.THAPA
+          </h1>
+        </div>
 
         <ul className={`hidden items-center justify-center gap-5 md:flex`}>
           {navLinks.map((navLink, index) => (

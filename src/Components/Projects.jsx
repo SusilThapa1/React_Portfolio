@@ -72,6 +72,8 @@ const Projects = () => {
                 src={projImg.video}
                 autoPlay
                 loop
+                muted
+                playsInline
                 className="object-fit aspect-video h-auto w-auto rounded-lg"
               />
             )}

@@ -29,9 +29,9 @@ const Hero = () => {
           </span>
           <p className="text-justify text-sm leading-relaxed text-gray-600 md:max-w-md md:text-lg">
             I’m a frontend developer focused on building clean, responsive, and
-            user-friendly web interfaces with React and Tailwind CSS. I know the
-            basics of Next.js and I’m learning backend technologies to become a
-            full-stack developer.
+            user-friendly web interfaces with React Js and TailwindCSS. I know
+            the basics of Next.js and currently I’m learning backend
+            technologies to become a full-stack developer.
           </p>
 
           {/* Buttons */}

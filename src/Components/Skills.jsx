@@ -49,7 +49,7 @@ const Skills = () => {
         {icons.map((item, index) => (
           <div
             key={index}
-            className="group flex flex-col items-center justify-center gap-3 rounded-lg border-2 border-yellow-50 p-5 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-blue-300"
+            className="group flex flex-col items-center justify-center gap-3 rounded-lg border-2 border-gray-100 p-5 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-blue-300"
           >
             <div className="text-6xl">{item.icon}</div>
             <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-sm font-medium transition-all duration-500 group-hover:text-transparent md:text-lg">

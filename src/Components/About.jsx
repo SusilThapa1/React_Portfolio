@@ -1,4 +1,4 @@
-import image from "../assets/hel.png";
+import image from "../assets/cyberimage.png";
 import Education from "./Education";
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
           <img
             src={image}
             alt="about"
-            className="hidden rounded-full bg-transparent md:block"
+            className="hidden h-[300px] w-[300px] rounded-full bg-transparent object-cover md:block"
           />
           <div className="flex flex-col items-start justify-center gap-10 text-sm leading-relaxed text-gray-900 md:text-lg">
             <div className="flex items-center justify-start gap-4 text-center">
