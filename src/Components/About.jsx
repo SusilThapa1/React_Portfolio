@@ -1,4 +1,4 @@
-import image from "../assets/cyberimage.png";
+import image from "../assets/about.jpg";
 import Education from "./Education";
 const About = () => {
   return (
