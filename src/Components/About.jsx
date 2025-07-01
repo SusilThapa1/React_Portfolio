@@ -13,15 +13,17 @@ const About = () => {
         <p className="text-justify text-sm leading-relaxed text-gray-600 md:text-lg">
           I am a passionate frontend developer with a knack for crafting
           user-friendly, visually appealing, and responsive web interfaces. I
-          specialize in technologies like React, Next.js, and Tailwind CSS, with
-          a strong focus on delivering seamless user experiences. I'm always
-          eager to learn, adapt, and bring creative ideas to life through code.
+          specialize in technologies like React, and Tailwind CSS, with a strong
+          focus on delivering seamless user experiences. I also know the basics
+          of Next.js and currently I’m learning backend technologies to become a
+          full-stack developer. I'm always eager to learn, adapt, and bring
+          creative ideas to life through code.
         </p>
         <div className="flex w-full items-center justify-center gap-20">
           <img
             src={image}
             alt="about"
-            className="hidden h-[300px] w-[300px] rounded-full bg-transparent object-cover md:block"
+            className="hidden h-[300px] w-[300px] rounded-full border-[5px] border-cyan-500 bg-transparent object-cover md:block"
           />
           <div className="flex flex-col items-start justify-center gap-10 text-sm leading-relaxed text-gray-900 md:text-lg">
             <div className="flex items-center justify-start gap-4 text-center">

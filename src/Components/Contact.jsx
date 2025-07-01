@@ -75,9 +75,12 @@ const Contact = () => {
             as possible!
           </p>
           <div className="flex flex-col gap-5">
-            <p className="flex items-center gap-3">
+            <a
+              href="mailto:shrishthapaa@gmail.com"
+              className="flex items-center gap-3"
+            >
               <LuMail className="text-xl" /> <span>shrishthapaa@gmail.com</span>
-            </p>
+            </a>
 
             <p className="flex items-center gap-3">
               <FaLocationDot className="text-xl" />

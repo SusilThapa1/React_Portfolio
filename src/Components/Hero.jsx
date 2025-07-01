@@ -2,8 +2,17 @@ import { FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
 import heroImage from "../assets/file.png";
 import Button from "./Button";
 import { FaLinkedin } from "react-icons/fa6";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: ["<Frontend Developer", "<MERN Stack Enthusiast"],
+    loop: 0,
+    typeSpeed: 150,
+    deleteSpeed: 100,
+  });
+  console.log(text);
+
   return (
     <main
       id="home"
@@ -20,18 +29,19 @@ const Hero = () => {
         </div>
 
         {/* Text Section */}
-        <div className="flex flex-col items-center justify-center gap-5 text-center md:items-start">
+        <div className="flex flex-col items-center justify-center gap-5 md:items-start">
           <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl md:text-4xl">
-            I'm Susil Thapa,
+            Hello, Everyone <span className="text-yellow-400">👋</span>
           </h1>
-          <span className="lg:2xl mt-1 text-lg font-semibold text-gray-800 md:text-xl">
-            frontend developer based in Nepal.
-          </span>
-          <p className="text-justify text-sm leading-relaxed text-gray-600 md:max-w-md md:text-lg">
-            I’m a frontend developer focused on building clean, responsive, and
-            user-friendly web interfaces with React Js and TailwindCSS. I know
-            the basics of Next.js and currently I’m learning backend
-            technologies to become a full-stack developer.
+          <div className="mt-1 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-lg font-bold text-transparent md:text-3xl">
+            I’M SUSIL THAPA <br /> A <span className="w-full">{text}</span>
+            <span className="text-blue-600">
+              <Cursor cursorStyle="/>" />
+            </span>
+          </div>
+          <p className="mt-2 max-w-md text-gray-600">
+            Passionate about crafting clean, responsive, and user-friendly web
+            experiences with React and MERN Stack.
           </p>
 
           {/* Buttons */}

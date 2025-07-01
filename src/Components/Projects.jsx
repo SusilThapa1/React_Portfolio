@@ -13,37 +13,38 @@ const Projects = () => {
       // image: proj1,
       video: video1,
       tech: "HTML,CSS,Javascript",
-      gitLink: "https://github.com/SusilThapa1/Game",
+      btntext: "Play Game",
+      link: "https://rps.thapasusil.com.np",
     },
     {
       name: "Tour and Travels",
       video: video2,
       tech: "React, Tailwind CSS",
-      gitLink: "https://github.com/SusilThapa1/TourAndTravelWeb",
+      link: "https://github.com/SusilThapa1/TourAndTravelWeb",
     },
     {
       name: "Personal Portfolio",
       image: proj3,
       tech: "HTML,Tailwind CSS",
-      gitLink: "https://github.com/SusilThapa1/-Portfolio.git",
+      link: "https://github.com/SusilThapa1/-Portfolio.git",
     },
     {
-      name: "Firebase Contact App",
+      name: "Contact App",
       image: proj4,
       tech: "React , CSS Modules",
-      gitLink: "https://github.com/SusilThapa1/Firebase_Contact.git",
+      link: "https://github.com/SusilThapa1/Firebase_Contact.git",
     },
     {
       name: "Dice Game",
       video: video3,
       tech: "React , CSS Modules",
-      gitLink: "https://github.com/SusilThapa1/Dice_Roll_Game",
+      link: "https://github.com/SusilThapa1/Dice_Roll_Game",
     },
     {
       name: "Dummy Products",
       image: proj6,
       tech: "Next.js, Taiwind CSS",
-      gitLink: "https://github.com/SusilThapa1/Dummy-Project.git",
+      link: "https://github.com/SusilThapa1/Dummy-Project.git",
     },
   ];
 
@@ -81,8 +82,8 @@ const Projects = () => {
             <h1 className="text-lg font-semibold md:text-xl">{projImg.name}</h1>
             <p className="text-sm md:text-lg">Tech Stack: {projImg.tech}</p>
 
-            <a href={projImg.gitLink} target="blank">
-              <Button text="View Code" />
+            <a href={projImg.link} target="blank">
+              <Button text={projImg.btntext ? projImg.btntext : "View Code"} />
             </a>
           </div>
         ))}
