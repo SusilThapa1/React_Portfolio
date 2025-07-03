@@ -22,3 +22,7 @@
   }
 }
 
+.glow-text {
+  text-shadow: 0 0 2px rgb(17, 174, 221), 0 0 3px rgb(10, 121, 161), 0 0 1px rgb(15, 115, 200);
+}
+

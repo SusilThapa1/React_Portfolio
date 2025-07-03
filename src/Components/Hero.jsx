@@ -30,12 +30,13 @@ const Hero = () => {
 
         {/* Text Section */}
         <div className="flex flex-col items-center justify-center gap-5 md:items-start">
-          <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl md:text-4xl">
+          <h1 className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-xl font-extrabold text-transparent sm:text-2xl md:text-4xl">
             Hello, Everyone <span className="text-yellow-400">👋</span>
           </h1>
-          <div className="mt-1 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-lg font-bold text-transparent md:text-3xl">
-            I’M SUSIL THAPA <br /> A <span className="w-full">{text}</span>
-            <span className="text-blue-600">
+          <div className="mt-1 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-lg font-extrabold text-transparent md:text-3xl">
+            I’M SUSIL THAPA <br />
+            <span className="glow-text w-full font-medium">A {text}</span>
+            <span className="glow-text text-blue-600">
               <Cursor cursorStyle="/>" />
             </span>
           </div>
