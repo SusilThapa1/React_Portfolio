@@ -14,10 +14,9 @@ const About = () => {
           I am a passionate frontend developer with a knack for crafting
           user-friendly, visually appealing, and responsive web interfaces. I
           specialize in technologies like React, and Tailwind CSS, with a strong
-          focus on delivering seamless user experiences. I also know the basics
-          of Next.js and currently I’m learning backend technologies to become a
-          full-stack developer. I'm always eager to learn, adapt, and bring
-          creative ideas to life through code.
+          focus on delivering seamless user experiences. Currently I’m learning
+          backend technologies to become a full-stack developer. I'm always
+          eager to learn, adapt, and bring creative ideas to life through code.
         </p>
         <div className="flex w-full items-center justify-center gap-20">
           <img

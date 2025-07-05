@@ -40,20 +40,16 @@ const Hero = () => {
               <Cursor cursorStyle="/>" />
             </span>
           </div>
-          <p className="mt-2 max-w-md text-gray-600">
-            Passionate about crafting clean, responsive, and user-friendly web
-            experiences with React and MERN Stack.
+          <p className="mt-2 max-w-md text-justify text-gray-600">
+            I love building clean, responsive, and easy-to-use websites using
+            React with Tailwindcss and the MERN stack.
           </p>
 
           {/* Buttons */}
           <div className="flex w-full flex-col items-center gap-3 md:items-start">
             <div className="flex w-full items-center justify-center gap-5 text-sm md:justify-start">
-              <a href="#contact" className="w-auto">
-                <Button
-                  type="button"
-                  bg="custom-gradient"
-                  text="Connect With Me"
-                />
+              <a href="#projects" className="w-auto">
+                <Button type="button" bg="custom-gradient" text="My Projects" />
               </a>
               <a
                 href="/SusilThapaResume1.pdf"
@@ -61,7 +57,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="w-auto"
               >
-                <Button type="button" text="See My Resume" />
+                <Button type="button" text="My Resume" />
               </a>
             </div>
 
@@ -72,36 +68,36 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="facebook"
-                className="transition-all duration-500 hover:-translate-y-2 hover:text-blue-600"
+                className="transition-all duration-500 hover:-translate-y-2"
               >
-                <FaFacebookF />
+                <FaFacebookF className="text-[#248dec] hover:text-[#0866ff]" />
               </a>
               <a
                 href="https://wa.me/9825821503"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="whatsapp"
-                className="transition-all duration-500 hover:-translate-y-2 hover:text-green-500"
+                className="transition-all duration-500 hover:-translate-y-2"
               >
-                <FaWhatsapp />
+                <FaWhatsapp className="text-[#248dec] hover:text-green-600" />
               </a>
               <a
                 href="https://github.com/SusilThapa1"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="github"
-                className="transition-all duration-500 hover:-translate-y-2 hover:text-gray-600"
+                className="transition-all duration-500 hover:-translate-y-2"
               >
-                <FaGithub />
+                <FaGithub className="text-[#248dec] hover:text-gray-600" />
               </a>
               <a
                 href="https://www.linkedin.com/in/susilthapa1"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="linkedin"
-                className="transition-all duration-500 hover:-translate-y-2 hover:text-sky-600"
+                className="transition-all duration-500 hover:-translate-y-2"
               >
-                <FaLinkedin />
+                <FaLinkedin className="text-[#248dec] hover:text-[#0a66c2]" />
               </a>
             </div>
           </div>

@@ -19,12 +19,12 @@ const Skills = () => {
     { icon: <FaCss3Alt className="text-[#4198ca]" />, name: "CSS3" },
     { icon: <SiJavascript className="text-yellow-400" />, name: "JavaScript" },
     { icon: <FaGithub className="" />, name: "GitHub" },
+    { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" },
     { icon: <FaReact className="text-cyan-400" />, name: "React" },
     { icon: <SiNextdotjs className="text-gray-900" />, name: "Next.js" },
     { icon: <FaNodeJs className="text-green-500" />, name: "Node.js" },
     { icon: <SiExpress className="text-gray-400" />, name: "Express.js" },
     { icon: <SiMongodb className="text-green-600" />, name: "MongoDB" },
-    { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" },
   ];
 
   return (
@@ -37,11 +37,12 @@ const Skills = () => {
           My Skills
         </h1>
         <p className="text-justify text-sm leading-relaxed text-gray-600 md:text-lg">
-          I specialize in building full-stack web applications using the MERN
-          stack. I have strong experience with React, Next.js, and Tailwind CSS
-          for crafting modern, responsive UIs, and I’m well-versed in backend
-          development using Node.js, Express, and MongoDB. I also use GitHub for
-          version control and follow modern development practices.
+          I'm learning to build full-stack web applications using the MERN
+          stack. I’ve been working with React and Tailwind CSS to create clean
+          and responsive user interfaces.On the backend, I’ve been working with
+          Node.js, Express, and MongoDB to build basic APIs and server-side
+          functionality. I also use GitHub for version control and follow modern
+          development practices as I continue to grow as a developer.
         </p>
       </div>
 

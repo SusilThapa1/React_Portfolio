@@ -1,8 +1,7 @@
 import { useState, useRef } from "react";
-import { LuMail } from "react-icons/lu";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { IoIosSend } from "react-icons/io";
+import { IoIosMail, IoIosSend } from "react-icons/io";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
@@ -79,7 +78,8 @@ const Contact = () => {
               href="mailto:shrishthapaa@gmail.com"
               className="flex items-center gap-3"
             >
-              <LuMail className="text-xl" /> <span>shrishthapaa@gmail.com</span>
+              <IoIosMail className="text-xl" />{" "}
+              <span>shrishthapaa@gmail.com</span>
             </a>
 
             <p className="flex items-center gap-3">
@@ -129,7 +129,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="linkedin"
-              className="transition-all duration-500 hover:text-sky-600"
+              className="transition-all duration-500 hover:text-[#0a66c2]"
             >
               <FaLinkedin />
             </a>
