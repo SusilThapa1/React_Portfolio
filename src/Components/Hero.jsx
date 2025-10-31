@@ -52,7 +52,7 @@ const Hero = () => {
                 <Button type="button" bg="custom-gradient" text="My Projects" />
               </a>
               <a
-                href="/SusilThapaResume1.pdf"
+                href="/SusilThapaResume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-auto"
